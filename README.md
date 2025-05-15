@@ -28,10 +28,10 @@ All data was provided by [Codebasics](https://codebasics.io/challenge/codebasics
 - Created SQL scripts for each business objective instead of combining all data upfront. This approach allowed focused analysis for different questions.
   
 #### SQL scripts created
-  - `combined_content.sql`: For content type, genre, and language comparisons
-  - `Upgrade_trends.sql` & `Downgrade_trends.sql`: To analyze plan transitions
-  - `monthly_new_subscribers.sql`: To analyze growth trends from Jan–Nov 2024
-  - `subscribers with content consumption.sql`: Joined `subscribers` with `content_consumption` to analyze user activity & demographics, watch time & inactivity correlation, and paid users distribution. Created a new column `user_status` (Active vs. Inactive)
+  - [Combined_content.sql](SQL%20scripts/Combined_content.sql): For content type, genre, and language comparisons
+  - [Upgrade_trends.sql](SQL%20scripts/Upgrade_trends.sql) & [Downgrade_trends.sql](SQL%20scripts/Downgrade_trends.sql): To analyze plan transitions
+  - [monthly_new_subscribers.sql](SQL%20scripts/monthly%20_new_subscribers.sql): To analyze growth trends from Jan–Nov 2024
+  - [subscribers with content consumption.sql](SQL%20scripts/subscribers%20with%20content%20consumption.sql): Joined `subscribers` with `content_consumption` to analyze user activity & demographics, watch time & inactivity correlation, and paid users distribution. Created a new column `user_status` (Active vs. Inactive)
 
 - Cleaned and exported specific query outputs as **CSV files** for Power BI visualization
 
