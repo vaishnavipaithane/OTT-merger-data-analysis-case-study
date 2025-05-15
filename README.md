@@ -13,8 +13,8 @@ The management team at Lio wants to analyze platform performance, content consum
 As the assigned analyst, my task was to uncover business insights and make data-driven recommendations to help position **Lio-Jotstar** as the leading OTT platform post-merger.
 
 You can view the official documents below:
-[Problem Statement](problem_statement.pdf)
-[Business Questions](primary_and_secondary_questions.pdf)
+- [Problem Statement](problem_statement.pdf)
+- [Business Questions](primary_and_secondary_questions.pdf)
 
 ## Data Collection, Preparation & Transformation
 
