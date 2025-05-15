@@ -31,13 +31,110 @@ All data was provided by [Codebasics](https://codebasics.io/challenge/codebasics
   - `combined_content.sql`: For content type, genre, and language comparisons
   - `Upgrade_trends.sql` & `Downgrade_trends.sql`: To analyze plan transitions
   - `monthly_new_subscribers.sql`: To analyze growth trends from Jan–Nov 2024
-  - `subscribers with content consumption.sql`: Joined `subscribers` with `content_consumption` to analyze user activity & demographics, watch time & inactivity correlation, and paid users distribution 
+  - `subscribers with content consumption.sql`: Joined `subscribers` with `content_consumption` to analyze user activity & demographics, watch time & inactivity correlation, and paid users distribution. Created a new column `user_status` (Active vs. Inactive)
 
 - Cleaned and exported specific query outputs as **CSV files** for Power BI visualization
 
 - In **Power BI**, performed transformations using Power Query:
-  - Converted watch time from minutes to hours
-  - Derived new columns (e.g. `user_status`, `revenue difference`, `monthly growth %`)
+  - Converted watch time from minutes to hours (`total_watch_time_hrs`)
+  - Appended and joined `Upgrade_trends` and `Downgrade_trends` tables to make `Upgrade and downgrade trends` table
+  - Created `PlanPricing` table
+  - Added `platform` column to each `LioCinema_db subscribers` and `Jotstar_db subscribers` table, and appended the tables to make the `AllSubscribers` table for revenue analysis. Created seven new columns and two DAX measures:
 
-
+    a. Time spent on the original plan
+       ```text
+       old plan = DATEDIFF('AllSubscribers'[subscription_date],'AllSubscribers'[plan_change_date], MONTH)
+       ```
+    b. Time spent on the new plan
+       ```text
+       new plan = DATEDIFF('AllSubscribers'[plan_change_date], COALESCE('AllSubscribers'[last_active_date], TODAY()), MONTH)
+       ```
+    c. Look up price for the original plan
+       ```text
+       old plan price = LOOKUPVALUE(PlanPricing[price], PlanPricing[subscription_plan], AllSubscribers[subscription_plan], PlanPricing[platform], AllSubscribers[platform])
+       ```
+    d. Look up price for the new plan
+       ```text
+       new plan price = LOOKUPVALUE(PlanPricing[price], PlanPricing[subscription_plan], AllSubscribers[new_subscription_plan], PlanPricing[platform], AllSubscribers[platform])
+       ```
+    e. Original plan revenue
+       ```text
+       old plan revenue = 'AllSubscribers'[old plan price] * 'AllSubscribers'[old plan]
+       ```
+    f. New plan revenue
+       ```text
+       new plan revenue = AllSubscribers[new plan price] * AllSubscribers[new plan]
+       ```
+    g. Revenue per user
+       ```text
+       revenue per user = AllSubscribers[old plan] * AllSubscribers[old plan price] + AllSubscribers[new plan] * AllSubscribers[new plan price]
+       ```
+    Total Revenue (Measure)
+       ```text
+       Total Subscribers Revenue = SUM('AllSubscribers'[revenue per user])
+       ```
+    Average revenue per user (Measure)
+      ```text
+      Avg Revenue Per User = DIVIDE(SUM('AllSubscribers'[revenue per user]), DISTINCTCOUNT('AllSubscribers'[user_id]), 0)
+      ```
+  - Made three DAX measures for the `monthly_new_subscribers` table:
+      - Monthly growth rate %
+        ```text
+        monthly growth rate % = 
+        VAR currentmonth = MAX('monthly _new_subscribers'[month])
+        VAR platform = SELECTEDVALUE('monthly _new_subscribers'[platform])
+        VAR currentusers = SUM('monthly _new_subscribers'[new_users])
+        VAR previoususers = CALCULATE(SUM('monthly _new_subscribers'[new_users]), 'monthly _new_subscribers'[month] = EDATE(currentmonth, -1), 'monthly _new_subscribers'[platform] = platform)
+        RETURN DIVIDE(currentusers - previoususers, previoususers, 0)
+        ```
+      - Average growth rate %
+        ```text
+        average growth rate % = AVERAGEX(VALUES('monthly _new_subscribers'[month]),'monthly _new_subscribers'[monthly growth rate %])
+        ```
+      - Cumulative users
+        ```text
+        cumulative users = CALCULATE(SUM('monthly _new_subscribers'[new_users]), FILTER(ALLSELECTED('monthly _new_subscribers'), 'monthly _new_subscribers'[month] <= MAX('monthly _new_subscribers'[month]) && 'monthly _new_subscribers'[platform] = MAX('monthly _new_subscribers'[platform])))
+        ```
+        
+  - Other DAX measures used for the analyses:
+    - % Active users
+      ```text
+      % Active Users = 
+      VAR TotalUsers = CALCULATE(DISTINCTCOUNT('subscribers with content consumption'[user_id]))
+      VAR ActiveUsers = CALCULATE(DISTINCTCOUNT('subscribers with content consumption'[user_id]), 'subscribers with content consumption'[user_status] = "Active")
+      RETURN DIVIDE(ActiveUsers, TotalUsers, 0)
+      ```
+    - % Inactive users
+      ```text
+      % Inactive Users = 
+      VAR TotalUsers = CALCULATE(DISTINCTCOUNT('subscribers with content consumption'[user_id]))
+      VAR InactiveUsers = CALCULATE(DISTINCTCOUNT('subscribers with content consumption'[user_id]), 'subscribers with content consumption'[user_status] = "Inactive")
+      RETURN DIVIDE(InactiveUsers, TotalUsers, 0)
+      ```
+    - Average watch time (hours) per user
+      ```text
+      average watch time (hrs) per user = DIVIDE(SUM('subscribers with content consumption'[total_watch_time_hrs]), DISTINCTCOUNT('subscribers with content consumption'[user_id]),0)
+      ```
+    - Upgrade rate %
+      ```text
+      Upgrade rate % = DIVIDE(SUM('Upgrade and downgrade trends'[upgraded_users]),DISTINCTCOUNT('subscribers with content consumption'[user_id]),0)*100
+      ```
+    - Downgrade rate %
+      ```text
+      Downgrade rate % = DIVIDE(SUM('Upgrade and downgrade trends'[downgraded_users]),DISTINCTCOUNT('subscribers with content consumption'[user_id]),0)*100
+      ```
+    - Paid users %
+      ```text
+      Paid Users % = 
+      VAR TotalUsers = DISTINCTCOUNT('subscribers with content consumption'[user_id])
+      VAR PaidUsers = 
+      CALCULATE(DISTINCTCOUNT('subscribers with content consumption'[user_id]), 'subscribers with content consumption'[subscription_plan] IN {"VIP", "Premium", "Basic"})
+      RETURN DIVIDE(PaidUsers, TotalUsers, 0)
+      ```
+    - Total paid users
+      ```text
+      Total Paid Users = 
+      CALCULATE(DISTINCTCOUNT('subscribers with content consumption'[user_id]), 'subscribers with content consumption'[subscription_plan] IN {"VIP", "Premium", "Basic"})
+      ```
+     
 
