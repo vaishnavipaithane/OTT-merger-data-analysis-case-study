@@ -12,6 +12,10 @@ The management team at Lio wants to analyze platform performance, content consum
 
 As the assigned analyst, my task was to uncover business insights and make data-driven recommendations to help position **Lio-Jotstar** as the leading OTT platform post-merger.
 
+You can view the official documents below:
+[Problem Statement](problem_statement.pdf)
+[Business Questions](primary_and_secondary_questions.pdf)
+
 ## Data Collection, Preparation & Transformation
 
 All data was provided by [Codebasics](https://codebasics.io/challenge/codebasics-resume-project-challenge) as part of a case study project. Two SQL files, `LioCinema_db.sql` and `Jotstar_db.sql`, were used to create relational databases in MySQL.
