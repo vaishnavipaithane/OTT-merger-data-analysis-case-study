@@ -145,9 +145,9 @@ All data was provided by [Codebasics](https://codebasics.io/challenge/codebasics
 
 The business questions were grouped into thematic areas across multiple Power BI pages, each answering a different aspect of the merger strategy.
 
-#### 1. **Content Analysis**
+#### 1. **Content Library Analysis**
 
-[
+![Content Dashboard](Screenshots/Content_analysis.png)
 
 
 
