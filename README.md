@@ -143,7 +143,7 @@ All data was provided by [Codebasics](https://codebasics.io/challenge/codebasics
 
 ## Data Analysis and Visualization
 
-The business questions were grouped into thematic areas across multiple Power BI pages, each answering a different aspect of the merger strategy. Key insights are also embedded inside dashboards.
+Business questions were grouped into thematic areas, each addressed on a dedicated Power BI page. Key takeaways are embedded within the dashboards.
 
 #### 1. **Content Library Analysis**
 
@@ -157,34 +157,45 @@ The business questions were grouped into thematic areas across multiple Power BI
 ![](Screenshots/User_activity_&_demographics.png)
 
 - Active users: Jotstar **85%** vs. LioCinema **55%**. Higher activity on Jotstar suggests stronger engagement and retention.
-- A majority of Jotstar active users **(43.5%)** are on the VIP plan, while inactive users are on the Free plan. Whereas, LioCinema's majority of active as well as inactive users are subscribed to the Free plan.
+- Majority of Jotstar active users **(43.5%)** are on the VIP plan, while LioCinema users, both active and inactive, mostly remain on the Free plan.
 
 #### 3. **Watch Time Analysis & Inactivity Correlation**
 
 ![](Screenshots/watch_time_analysis_&_inactivity_correlation.png)
 
 - Average watch time (hours): Jostar **352** vs. LioCInema **60**
-- On LioCinema, there is a clear negative correlation between watch time and user retention; users with the lowest engagement (18-24) have the highest inactivity rate of 49%, while the most engaged (45+) show a relatively lower inactivity rate of 39%.
-- On Jotstar, all age groups show high watch time (310–380 hrs) and a consistent inactivity rate of ~14%, indicating that user drop-off may be influenced by pricing or seasonal usage.
+- LioCinema shows a strong inverse link between engagement and retention; less engaged users (18–24) have the highest inactivity (49%).
+- Jotstar users maintain high watch time (310–380 hrs) and consistent retention (~14%) across all age groups, indicating pricing or seasonal usage may influence user drop-off.
 
 #### 4. **Upgrade and Downgrade Trends**
 
 ![](Screenshots/upgrade_&_downgrade_trends.png)
 
-- Jotstar maintains relatively balanced upgrade (1.9%) and downgrade (1.2%) rates, suggesting a stable and gradual transition of users toward higher-value plans.
-- LioCinema, however, experiences a significant downgrade problem, with a downgrade rate (9.1%) vastly exceeding its upgrade rate (1.8%).
-- The most common upgrade transition is from VIP to Premium for Jotstar, and from Free to Basic for LioCinema, reflecting differing user behaviours toward premium content.
-- In LioCinema, downgrades are predominantly from Basic to Free and Premium to Free, whereas in Jotstar, it is from VIP to Free.
+- Upgrade/Downgrade Rate: Jotstar – 1.9% / 1.2%, LioCinema – 1.8% / 9.1%
+- Jotstar’s top upgrade: VIP → Premium
+- LioCinema’s top upgrade: Free → Basic, but faces major downgrades from Premium/Basic → Free
 
 #### 5. Paid Users Distribution
 
 ![](Screenshots/paid_users_distribution.png)
 
-- 
+- Paid user share: Jotstar - 72.9%, LioCinema - 42.8%
+- Jotstar splits across VIP (58.8%) and Premium (41.1%)
+- LioCinema paid users: mostly on Basic (68%), followed by Premium (32%)
+
+#### 6. Revenue Analysis
 
 ![](Screenshots/revenue_analysis.png)
 
+- ARPU: Jotstar - **₹388** | LioCinema - lower, due to high downgrade volume
+- Jotstar’s strong upgrade behaviour drives revenue, while LioCinema struggles with premium retention.
+
+#### 7. Monthly User Growth Rate
+
 ![](Screenshots/monthly_users_growth_rate.png)
+
+- Average Growth Rate (Jan–Nov 2024): LioCinema - **16.95%** | Jotstar - **0.73%**.
+- LioCinema’s affordable plans and regional focus likely fueled faster user acquisition.
 
 
 
