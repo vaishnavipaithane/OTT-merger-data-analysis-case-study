@@ -197,6 +197,10 @@ Business questions were grouped into thematic areas, each addressed on a dedicat
 - Average Growth Rate (Jan–Nov 2024): LioCinema - **16.95%** | Jotstar - **0.73%**.
 - LioCinema’s affordable plans and regional focus likely fueled faster user acquisition.
 
+## Strategic Recommendations
+
+
+
 
 
 
