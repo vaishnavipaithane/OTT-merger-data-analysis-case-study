@@ -253,7 +253,7 @@ Price points should remain competitive with existing OTT services, ranging from 
 
 ## Conclusion
 
-This project provides a comprehensive analysis of two leading OTT platforms — LioCinema and Jotstar — in preparation for a potential merger. By combining SQL-driven data exploration with interactive Power BI dashboards, the goal is to help the merged platform optimize user retention, boost revenue, and strengthen its long-term position as India’s leading OTT destination.
+This project provides a comprehensive analysis of two leading OTT platforms, **LioCinema** and **Jotstar**, in preparation for a potential merger. By combining SQL-driven data exploration with interactive Power BI dashboards, the goal is to help the merged platform optimize user retention, boost revenue, and strengthen its long-term position as India’s leading OTT destination.
 
 ## Thank you
 
