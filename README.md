@@ -199,6 +199,72 @@ Business questions were grouped into thematic areas, each addressed on a dedicat
 
 ## Strategic Recommendations
 
+Based on the detailed analysis of user behaviour, platform performance, content consumption, and revenue trends, the following strategic recommendations are proposed for the newly merged OTT platform **Lio-Jotstar**.
+
+### 1. Increase Engagement Among Inactive Users
+- **Personalized re-engagement:** Utilize data-driven insights to send tailored push notifications, emails, and in-app messages based on each user’s preferences and viewing history.
+- **Incentives-based campaigns:** Reach out to inactive users with special offers, discounts, or free trials to encourage their return. 
+- **UX improvements:** Enhance the app’s user interface for easy navigation and a simple search function.
+- **Interactive and social features:** Introduce engaging content such as quizzes, polls, live chats, and Q&A sessions to boost viewer participation. Promote user-generated content (UGC) to foster a sense of community and belonging.
+
+### 2. Launch Targeted Brand Campaigns
+- **Leverage India’s Love for Cricket and Live Sports:** Roll out high-impact campaigns during IPL, ICC tournaments, and other cricket matches. Position the merged platform as the go-to destination for live sports streaming.
+- **AI-driven personalized recommendations:** Create campaigns that highlight the platform’s capability to provide hyper-personalized content recommendations, making it easy for users to discover shows and movies they love.
+- **Shoppable ads:** Introduce interactive ad formats that allow users to engage with shopping brands directly from the video content.
+- **Festival & Seasonal Campaigns:** Align brand campaigns with major Indian festivals (Diwali, Holi, etc.) and seasonal events (summer vacations) to maintain cultural relevance.
+- **OTT Bundling and Partnerships:** Offer bundled subscriptions with major telecom partners to provide budget-friendly options to viewers, especially those in tier 2 and tier 3 cities.
+- **Influencer and celebrity campaigns:**  Collaborate with pan-India influencers, regional creators, and celebrities to drive engagement across various language segments.
+
+### 3. Proposed pricing strategy
+- **Tiered Subscription Model with clear differentiation:** Introduce three straightforward subscription plans that cater to various income levels:
+
+| Plan | Target Audience | Key Features |
+| ---- | --------------- | ------------ |
+| Free (Ad-supported) |	First-time users, rural/Tier 3 viewers | Limited access, regional content, ads |
+| Basic (Low-cost) | Mobile-first, Tier 2 users |	1 screen, regional + national shows, SD/HD |
+| Premium |	Urban, multi-device households | 4 screens, sports, 4K content, exclusive originals |
+
+Price points should remain competitive with existing OTT services, ranging from ₹99 to ₹149 for Basic and VIP plans, and starting at ₹299 for Premium.
+- **Flexible Trials and Discounts:** Offer trial periods of 7 to 14 days, along with upgrade discounts for users who have been inactive or wish to downgrade.
+- **Mobile-Only Plan Variant:** Introduce a Mobile-only plan (~₹49-₹59/month) to target younger audiences with budget constraints. This option is particularly effective in Tier 2 and Tier 3 cities, where smartphone viewership is prevalent.
+- **Regional & Localized Pricing:** Adjust pricing based regional content and local purchasing power, taking into account user engagement and churn history.
+- **Bundling & Family Plans:** Offer bundled subscriptions (multiple OTTs, telecom partnerships) and family plans for multi-user households. Bundling adds value and encourages long-term subscriptions.
+- **Yearly Plans with Loyalty Rewards:** Promote annual subscriptions by offering pricing benefits and loyalty points redeemable for merchandise, early access to content, or premium events to boost retention and reduce churn.
+
+### 4. Partnership with telecom companies
+- **Bundle with Prepaid Recharge Packs:** Collaborate with major telecom companies to offer OTT subscriptions with recharge packs (e.g., ₹299/month with 1.5gb/day + OTT access). This will reduce entry barriers and increase convenience for users.
+- **Recharge Vouchers:** Offer recharge vouchers during key event launches like IPL or movie premiers. 
+- **Include Premium OTT in Broadband Plans:** Add OTT access to high-tier broadband plans, particularly targeting households in metro areas.
+- **Family Access Plans:** Introduce family plans to encourage shared OTT access for multi-user households.
+- **New SIM Activation Offers:** Offer three months of free OTT access for new SIM purchases.
+- **Localized Regional Targeting:** Use telecoms’ regional insights to push language-specific content tailored for Tier 2/3 cities and older users.
+
+### 5. Implement AI and machine learning
+- **Hyper-Personalized Recommendations:** Generate content suggestions based on user behaviour, viewing history, preferences, and contextual cues like time of day or mood.
+- **Dynamic Homepage Curation:** Customise homepage layout to prioritize genres, languages, or stars they watch. Highlight new episodes or soon-to-expire titles.
+- **Voice & Smart Search in Regional Languages:** Implement voice recognition in regional languages and predictive search tailored to user viewing habits.
+- **Ad Personalization:** Deliver targeted ads based on viewer behaviour and context (e.g., time of day, mood-based genres).
+- **Streaming Optimization:** Adjust video quality based on real-time network strength using predictive buffering, which is crucial for Tier 2/3 mobile users.
+
+### 6. Brand Ambassador Strategy
+- Primary face: Shah Rukh Khan or Deepika Padukone for entertainment appeal.
+- Sports face: Virat Kohli or Neeraj Chopra for sports audience.
+- Include regional stars & creators to localize brand identity.
+
+## Conclusion
+
+This project provides a comprehensive analysis of two leading OTT platforms — LioCinema and Jotstar — in preparation for a potential merger. By combining SQL-driven data exploration with interactive Power BI dashboards, the goal is to help the merged platform optimize user retention, boost revenue, and strengthen its long-term position as India’s leading OTT destination.
+
+## Thank you
+
+
+
+
+
+
+
+
+
 
 
 
